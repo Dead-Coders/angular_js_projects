@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="logo">
+      <a routerLink="/"><img src="assets/img/logo.png"></a>
+  </div>
+  <div class="login-block">
+    <div class="log-in">
+      <span>{{ userEmail$ | async | lowercase }}</span>
+    </div>
+    <button
+      class="log-out"
+      (click)=logOut()>
+      <span>Log Out</span>
+    </button>
+  </div>
+</div>

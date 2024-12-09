@@ -1,0 +1,30 @@
+mat-sidenav-container,
+mat-sidenav-content {
+  height: 100%;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-sidenav {
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.navigation-items{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.nav-caption{
+  padding-left: 10px;
+}

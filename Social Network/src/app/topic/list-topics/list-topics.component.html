@@ -1,0 +1,12 @@
+<div class="container">
+  <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+
+  <div class="row" *ngFor="let topic of topics">
+    <div class="col center" *ngIf="searchMatch(topic)"><a class="username" href="/topic-posts/{{topic.name}}">
+        @{{topic.name}}</a>
+      <br>
+      Description: {{topic.description}}
+      <hr />
+    </div>
+  </div>
+</div>

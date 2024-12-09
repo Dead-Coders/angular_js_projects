@@ -1,0 +1,31 @@
+version: 2
+general:
+  branches:
+    only:
+      - master
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.4.0
+    
+    working_directory: ~/instant
+
+    steps:
+      - checkout
+      - run: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+      - run: npm install -g angular-cli-ghpages
+      - run: npm install -g @angular/cli
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - deploy:
+          name: "Deploy to GitHub Pages"
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ng build --prod --base-href "https://zeit.js.org/instant/"
+              ngh --repo=https://${GH_TOKEN}@github.com/finnzeit/instant.git --name="finnzeit" --email=finnzeit@gmail.com
+            fi

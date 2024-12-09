@@ -1,0 +1,54 @@
+<article itemprop="text">
+  <p>Angular Currency Converter/Calculator</p>
+  <p>Working with latest Angular 8.</p>
+  <p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 8.0.6.</p>
+
+  <h1>Currency Converter/Calculator</h1>
+  <p>Used localStorage to limit number of requests to api endpoint.</p>
+  <p>Default base conversion currency is EUR (Euro)</p>
+  <h2>Prerequisites</h2>
+  <ul>
+    <li><a href="https://www.npmjs.com/">npm - Package Manager</a></li>
+    <li><a href="https://nodejs.org/en/">Node.js</a></li>
+    <li><a href="https://github.com/angular/angular-cli">Angular CLI</a></li>
+  </ul>
+  <h2>Setup and installation</h2>
+  <ol>
+    <li>Clone the repository.</li>
+    <li>Navigate to root project folder using any command line interface (e.g. Command Prompt on Windows).</li>
+    <li>Run <code>npm install</code> to install packages.</li>
+    <li>Run development server.</li>
+  </ol>
+  <h2>Development server</h2>
+  <p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>.</p>
+  <h2>Project structure</h2>
+  <p><code>/src</code> - source folder, has the general Angular CLI project structure.</p>
+  <ul>
+    <li><code>/app</code> - contains AppComponent along with the following subfolders:
+      <ul>
+        <li><code>/currency-converter</code> - Currency Converter feature module and related components, models, etc..</li>
+        <li><code>/exchange-rates</code> - Exchange Rates feature module and related components, models, etc..</li>
+        <li><code>/about</code> - About feature Module, contains component/page with instructions for setup and installation</li>
+        <li><code>/shared</code> - Shared Module, contains shared services and other shared elements</li>
+      </ul>
+    </li>
+  </ul>
+  <h2>Usage</h2>
+  <p>On first load, application displays welcome message.</p>
+  <p>On successful load, application navigates user automatically to Exchange Rates page where user can select base
+    currency and filter quote currencies.</p>
+  <p>Clicking on quote currency navigates user to Currency Converter where user can enter desired amount to convert.
+    Currency select form fields are prepopulated but user can make its own selection of currency.</p>
+  <p>Clicking on Convert button Conversion Details section is displayed with resulting amount and exchange rates of
+    selected
+    currencies.</p>
+  <p>Additionaly, user can swap currencies by clicking on Reverse icon button located between currency select form
+    fields.</p>
+  <h2>To Do</h2>
+  <ul>
+    <li>Unit test application components/services</li>
+    <li>Implement cache</li>
+    <li>Implement Validators and Error Handlers</li>
+    <li>Extract Util functions and reusable components</li>
+  </ul>
+</article>

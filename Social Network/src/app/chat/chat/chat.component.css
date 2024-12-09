@@ -1,0 +1,188 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.bubbleWrapperOther {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-self: flex-end;
+  color: #1c9e5d;
+}
+
+.bubbleWrapperMy {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-self: flex-end;
+  color: #fff;
+}
+
+.inlineContainer {
+  display: inline-flex;
+}
+
+.inlineContainer.own {
+  flex-direction: row-reverse;
+}
+
+.inlineIcon {
+  width: 20px;
+  object-fit: contain;
+}
+
+.ownBubble {
+  color: white;
+  min-width: 40px;
+  max-width: 700px;
+  padding: 6px 14px;
+  margin: 2px 4px;
+  background-color: rgb(151, 151, 151);
+  border-radius: 25px 25px 0 25px;
+  border: 1px solid white;
+}
+
+.otherBubble {
+  min-width: 40px;
+  max-width: 700px;
+  padding: 6px 14px;
+  margin: 2px 4px;
+  background-color: #1c9e5d;
+  border-radius: 25px 25px 25px 0;
+  border: 1px solid #1c9e5d;
+}
+
+.own {
+  align-self: flex-end;
+}
+
+.other {
+  align-self: flex-start;
+}
+
+span.own,
+span.other {
+  font-size: 13px;
+  color: grey;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  fill: #1c9e5d;
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 3px 16px;
+  opacity: 1;
+  background-color: #1c9e5d;
+  border-color: #1c9e5d;
+  color: aliceblue;
+  margin-right: 25px;
+}
+
+.input-button-form {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2 0px;
+}
+
+.form-control {
+  max-width: 87%;
+  border-radius: 25px;
+  font-size: 20px;
+  border: 1px solid gray;
+  font-family: "Roboto", sans-serif;
+  padding-right: 5px;
+}
+
+input {
+  transition: width 0.8s ease-in-out;
+  width: 100%;
+}
+
+input:focus {
+  border: 1px solid #1c9e5d;
+  box-shadow: 0px 1px 7px #1c9e5d;
+  width: 100%;
+}
+
+.btn-send {
+  fill: #1c9e5d;
+  border: 1px solid;
+  border-radius: 510px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 22px;
+  padding-top: 9px;
+  padding-bottom: 7px;
+  padding-right: 13px;
+  padding-left: 7px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  opacity: 1;
+  background-color: #1c9e5d;
+  border-color: #1c9e5d;
+  color: aliceblue;
+  margin-left: 15px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #1c9e5d;
+}
+
+#ime {
+  border-bottom: #1c9e5d 2px solid;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.container::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  box-shadow: inset 0 0 5px gainsboro;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c9e5d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.full-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 75vh;
+  align-items: center;
+}
+
+.container {
+  min-width: 52%;
+  max-width: 52%;
+}
+
+.send-message {
+  margin-top: 30px;
+  min-width: 57%;
+  margin-left: 5%;
+}

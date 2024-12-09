@@ -1,0 +1,7 @@
+<div class="container">
+  <form role="form" (submit)="createChannel($event, channelName.value)" class="text-center">
+    <input #channelName class="form-control form-control-lg" type="text" placeholder="New channel name?" id="channel-name">
+    <br />
+    <button class="btn btn-lg btn-primary" type="submit">Create channel</button>
+  </form>
+</div>

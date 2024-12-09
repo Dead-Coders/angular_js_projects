@@ -1,0 +1,127 @@
+.post-title {
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.post-title:hover {
+  opacity: 0.6;
+}
+
+.subreddit-text {
+  font-weight: bold;
+}
+
+.post-url {
+  color: black;
+}
+
+.username {
+  color: gray;
+}
+
+.post-text {
+  margin-top: 10px;
+}
+
+.post {
+  --post-line-color: #ccc;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #878A8C;
+  position: relative;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.comment {
+  --post-line-color: #ccc;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #878A8C;
+  position: relative;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.reaction {
+  margin-right: 25px;
+}
+
+.btn {
+  color: #1C9E5D;
+  border: #1C9E5D;
+}
+
+.deletePost {
+  background-color: transparent;
+  border-color: #1C9E5D;
+  color: red;
+  fill: red;
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 3px 16px;
+  opacity: 1;
+}
+
+.arrow {
+  color: #1C9E5D;
+  border: #1C9E5D;
+}
+
+.deleteItem:hover {
+  background-color: red;
+  color: aliceblue;
+}
+
+.btnDeleteComment {
+  background-color: red;
+  border-color: #1C9E5D;
+  color: aliceblue;
+  fill: red;
+  border: 1px solid;
+  border-radius: 4px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 3px 16px;
+  opacity: 1;
+}
+
+.btnComment {
+  background-color: #1C9E5D;
+  border-color: #1C9E5D;
+  color: aliceblue;
+  fill: #1C9E5D;
+  border: 1px solid;
+  border-radius: 4px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 3px 16px;
+  opacity: 1;
+}

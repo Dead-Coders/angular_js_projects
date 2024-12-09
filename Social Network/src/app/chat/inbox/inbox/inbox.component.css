@@ -1,0 +1,44 @@
+.full-container {
+  padding-left: 20px;
+}
+
+.search {
+  padding-left: 50px;
+  width: 100%;
+}
+
+.inbox-msg {
+  border: solid 1px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
+.msg:hover {
+  background-color: gray;
+}
+
+.msg {
+  border: solid 1px;
+}
+
+.with {
+  font-weight: bold;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  background-color: #1C9E5D;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.num {
+  text-align: center;
+  color: white;
+  font-size: small;
+}

@@ -1,0 +1,32 @@
+<div class="course container">
+  <div class="course-img">
+    <img src="assets/img/angular_logo.png">
+  </div>
+  <div class="course-info" *ngIf="course">
+    <div class="course-header">
+      <h3 class="course-title">{{course.title | uppercase }}
+        <span *ngIf="course.isTopRated"
+          [ngClass]="{
+            'rating-star': course.isTopRated           
+          }">&#9733;</span>
+      </h3>
+      <div class="course-date">{{course.date | date: 'MM.dd.yyyy'}}</div>
+    </div>
+    <div class="course-description">
+      {{course.description}}
+    </div>
+    <div class="course-duration">
+      <span>Duration: {{course.duration | duration}}</span>
+    </div>
+  </div>
+  <div class="course-control">
+    <div class="edit">
+      <button class="edit-btn"
+        (click)="editCourse()">Edit</button>
+    </div>
+    <div class="delete">
+      <button class="remove-btn"
+        (click)="deleteCourse()">Delete</button>
+    </div>
+  </div>
+</div>

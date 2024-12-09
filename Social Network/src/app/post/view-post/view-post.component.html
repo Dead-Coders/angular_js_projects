@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="row">
+    <hr />
+    <div class="col-md-9">
+      <div class="row post">
+        <div class="col-md-1 reaction">
+          <app-reaction [post]="post"></app-reaction>
+        </div>
+        <div class="col-md-10">
+          <div>
+            <span>
+              <span class="topic-text"><a class="post-url"
+                  href="/topic-posts/{{post.topicName}}">{{post.topicName}}</a></span>
+              <span> . Posted
+                <span> {{post.duration}} </span>
+                by
+                <a *ngIf="post.userName === null" class="username" href="">Anonymous</a>
+                <a *ngIf="post.userName != null" class="username" href="">{{post.userName}}</a>
+              </span>
+            </span>
+            <div class="row float-right">
+              <div class="col">
+                <div ngbDropdown class="d-inline-block">
+                  <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle></button>
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <div *ngIf=postOwnedByLoggedUser>
+                      <button class="deleteItem" ngbDropdownItem (click)="deletePost()">Delete</button>
+                      <button ngbDropdownItem class="editItem" (click)="goToEditPost()">Edit</button>
+                    </div>
+                    <button *ngIf=!postOwnedByLoggedUser ngbDropdownItem class="deleteItem"
+                      (click)="reportPost()">Report
+                      post</button>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <hr />
+          <a class=" post-title">{{post.title}}</a>
+          <div>
+            <p class="post-text" [innerHtml]="post.content"></p>
+          </div>
+          <div class="post-comment">
+            <form [formGroup]="commentForm" (ngSubmit)="postComment()">
+              <div class="form-group">
+                <textarea class="form-control" [formControlName]="'text'" placeholder="Your Thoughts?"></textarea>
+              </div>
+              <button type="submit" class="btnComment float-right">Comment</button>
+            </form>
+          </div>
+          <div style="margin-top: 60px;" *ngFor="let comment of comments">
+            <div class="comment">
+              <div class="username">
+                <a routerLink="/user-profile/{{comment.username}}">{{comment.username}}</a>
+                <div ngbDropdown class="d-inline-block float-right">
+                  <button type="button" class="arrow btn-outline-primary" id="dropdownBasic1"
+                    ngbDropdownToggle></button>
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <div *ngIf=isCommentOwnedByLoggedUser(comment.username)>
+                      <button class="deleteItem" ngbDropdownItem (click)="deleteComment(comment.id)">Delete</button>
+                      <!--<button ngbDropdownItem class="editItem" (click)="goToEditPost(post.id)">Edit</button>-->
+                    </div>
+                    <button *ngIf=!isCommentOwnedByLoggedUser(comment.username) ngbDropdownItem
+                      class="deleteItem">Report
+                      comment</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>{{comment.duration}}</p>
+              </div>
+              <b>{{comment.text}}</b>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <app-side></app-side>
+      <app-topic-side></app-topic-side>
+    </div>
+  </div>
+</div>
